@@ -19,7 +19,7 @@ public class RotateInput : MonoBehaviour {
         //passive deceleration
         if(Speed != 0)
         {
-            Speed = (.9 * Speed);
+            //Speed = (.9 * Speed);
         }
   
         //rotate left
@@ -45,6 +45,6 @@ public class RotateInput : MonoBehaviour {
         }
 
         //do trasnform
-        transform.rotation = Quaternion.Euler(0, InitialRotation, transform.rotation.x + (float)Speed);
+        //transform.rotation = Quaternion.Euler(0, InitialRotation, transform.rotation.x + (float)Speed);
     }
 }
