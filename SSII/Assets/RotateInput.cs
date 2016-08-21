@@ -3,48 +3,57 @@ using System.Collections;
 
 public class RotateInput : MonoBehaviour {
 
-    public float Acceleration { get; set; }
-    public float MaxSpeed { get; set; }
-    private double Speed { get; set; }
-    private float InitialRotation { get; set; }
-    private double PreviousRotation { get; set; }
+    public float Speed;
+    public float Acceleration;
+    public float Deceleration;
+    public float MaxSpeed;
 
-    void Start () {
-        Acceleration = 20;
-        MaxSpeed = 1000;
-        InitialRotation = this.gameObject.transform.rotation.eulerAngles.y;
+	// Use this for initialization
+	void Start () {
+	 
 	}
 	
+	// Update is called once per frame
 	void Update () {
-        //passive deceleration
-        if(Speed != 0)
-        {
-            //Speed = (.9 * Speed);
-        }
-  
-        //rotate left
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            Speed += Time.deltaTime * Acceleration;
-        }
 
-        //rotate right
-        else if (Input.GetKey(KeyCode.RightArrow))
+        if (Speed <= MaxSpeed && Speed >= -MaxSpeed)
         {
-            Speed -= Time.deltaTime * Acceleration;
-        }
+            //rotate right
+            if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+            {
+                Speed += Time.deltaTime + Acceleration;
+            }
+            //rotate left
+            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+            {
+                Speed -= Time.deltaTime + Acceleration;
+            }
+            if(!Input.GetKey(KeyCode.LeftArrow) &! Input.GetKey(KeyCode.RightArrow) & !Input.GetKey(KeyCode.A) & !Input.GetKey(KeyCode.D))
+            {
 
-        //cap speeds
-        if(Speed > MaxSpeed)
-        {
-            Speed = MaxSpeed;
-        }
-        else if(Speed < -MaxSpeed)
-        {
-            Speed = -MaxSpeed;
-        }
+                Speed -= Speed/Deceleration; 
+            }
 
-        //do trasnform
-        //transform.rotation = Quaternion.Euler(0, InitialRotation, transform.rotation.x + (float)Speed);
+        if (Speed > MaxSpeed)
+            {
+                Speed = MaxSpeed;
+            }
+        else if (Speed < -MaxSpeed)
+            {
+                Speed = -MaxSpeed;
+            }
+        }
+   //this actually rotates it
+   transform.Rotate(Vector3.forward * Speed * Time.deltaTime);
+
+   //deceleration
+        /*if ((!Input.GetKey(KeyCode.RightArrow) || !Input.GetKey(KeyCode.LeftArrow)) && Speed > 0)
+            {
+            Speed -= Time.deltaTime * Deceleration;
+            }
+        else if (Speed < 0)
+            {
+            Speed += Time.deltaTime * Deceleration;
+            }*/
     }
 }
