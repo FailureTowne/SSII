@@ -28,6 +28,8 @@ public class RotateInput : MonoBehaviour {
             {
                 Speed -= Time.deltaTime + Acceleration;
             }
+
+			//deceleration
             if(!Input.GetKey(KeyCode.LeftArrow) &! Input.GetKey(KeyCode.RightArrow) & !Input.GetKey(KeyCode.A) & !Input.GetKey(KeyCode.D))
             {
 
@@ -45,15 +47,5 @@ public class RotateInput : MonoBehaviour {
         }
    //this actually rotates it
    transform.Rotate(Vector3.forward * Speed * Time.deltaTime);
-
-   //deceleration
-        /*if ((!Input.GetKey(KeyCode.RightArrow) || !Input.GetKey(KeyCode.LeftArrow)) && Speed > 0)
-            {
-            Speed -= Time.deltaTime * Deceleration;
-            }
-        else if (Speed < 0)
-            {
-            Speed += Time.deltaTime * Deceleration;
-            }*/
     }
 }
