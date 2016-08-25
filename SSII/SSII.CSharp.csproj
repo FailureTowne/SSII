@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="Assets\JellyfishMovement.cs" />
     <Compile Include="Assets\MatchRotation.cs" />
+    <Compile Include="Assets\MonoLight.cs" />
     <Compile Include="Assets\MonorailController.cs" />
     <Compile Include="Assets\PassiveRotate.cs" />
     <Compile Include="Assets\RotateInput.cs" />
