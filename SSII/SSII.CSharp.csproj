@@ -77,6 +77,7 @@
     <Compile Include="Assets\AsteroidSpawner.cs" />
     <Compile Include="Assets\AtmoRotate.cs" />
     <Compile Include="Assets\JellyfishMovement.cs" />
+    <Compile Include="Assets\LightRotator.cs" />
     <Compile Include="Assets\MatchRotation.cs" />
     <Compile Include="Assets\MonoLight.cs" />
     <Compile Include="Assets\MonorailController.cs" />
