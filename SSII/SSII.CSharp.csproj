@@ -72,6 +72,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AsteroidMover.cs" />
+    <Compile Include="Assets\AsteroidRotate.cs" />
+    <Compile Include="Assets\AsteroidSpawner.cs" />
+    <Compile Include="Assets\AtmoRotate.cs" />
     <Compile Include="Assets\JellyfishMovement.cs" />
     <Compile Include="Assets\MatchRotation.cs" />
     <Compile Include="Assets\MonoLight.cs" />
