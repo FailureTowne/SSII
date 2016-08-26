@@ -72,11 +72,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AtmoCollide.cs" />
-    <Compile Include="Assets\AtmoHealth.cs" />
     <Compile Include="Assets\AsteroidMover.cs" />
     <Compile Include="Assets\AsteroidRotate.cs" />
     <Compile Include="Assets\AsteroidSpawner.cs" />
+    <Compile Include="Assets\AtmoCollide.cs" />
+    <Compile Include="Assets\AtmoHealth.cs" />
     <Compile Include="Assets\AtmoRotate.cs" />
     <Compile Include="Assets\JellyfishMovement.cs" />
     <Compile Include="Assets\LightRotator.cs" />
