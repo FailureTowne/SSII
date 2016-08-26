@@ -72,6 +72,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AtmoCollide.cs" />
+    <Compile Include="Assets\AtmoHealth.cs" />
     <Compile Include="Assets\JellyfishMovement.cs" />
     <Compile Include="Assets\MatchRotation.cs" />
     <Compile Include="Assets\MonorailController.cs" />
