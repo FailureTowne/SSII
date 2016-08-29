@@ -11,7 +11,7 @@ public class AtmoRotate : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        transform.Rotate(Vector3.right, Time.deltaTime * 5);
+        transform.Rotate(Vector3.right, Time.deltaTime * 4);
 
 	}
 }

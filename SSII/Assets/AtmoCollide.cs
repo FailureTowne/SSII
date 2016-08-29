@@ -14,11 +14,11 @@ public class AtmoCollide : MonoBehaviour {
 	
 	}
 
-    void OnCollisionEnter(Collision atmo)
+    void OnTriggerEnter(Collider atmo)
     {
-        System.Console.WriteLine("IN COLLISION");
         if (atmo.gameObject.tag == "atmo")
         {
+            print("COLLISION");
             GetComponent<JellyfishMovement>().Speed = 0;
         }
     }
