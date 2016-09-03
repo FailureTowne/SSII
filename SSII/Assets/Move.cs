@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RotateRight : MonoBehaviour {
+public class Move : MonoBehaviour {
 
-    public int RotateSpeed;
+    public float Speed;
+    public Vector3 Direction;
 
 	// Use this for initialization
 	void Start () {
@@ -13,7 +14,7 @@ public class RotateRight : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        transform.Rotate(Vector3.right, Time.deltaTime * RotateSpeed);
-	
+        transform.Translate(Direction * Time.deltaTime * Speed);
+
 	}
 }

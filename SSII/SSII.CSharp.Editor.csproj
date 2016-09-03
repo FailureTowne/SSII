@@ -109,8 +109,6 @@
     <Compile Include="Assets\Editor\ImageEffects\CameraMotionBlurEditor.cs" />
     <Compile Include="Assets\Editor\ImageEffects\ColorCorrectionCurvesEditor.cs" />
     <Compile Include="Assets\Editor\ImageEffects\ColorCorrectionLookupEditor.cs" />
-    <Compile Include="Assets\Editor\ImageEffects\DepthOfFieldDeprecatedEditor.cs" />
-    <Compile Include="Assets\Editor\ImageEffects\DepthOfFieldEditor.cs" />
     <Compile Include="Assets\Editor\ImageEffects\EdgeDetectionEditor.cs" />
     <Compile Include="Assets\Editor\ImageEffects\NoiseAndGrainEditor.cs" />
     <Compile Include="Assets\Editor\ImageEffects\SunShaftsEditor.cs" />
