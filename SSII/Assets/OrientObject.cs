@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MatchRotation : MonoBehaviour {
+public class OrientObject : MonoBehaviour {
 
     // Use this for initialization
     public Transform RotateMimick;

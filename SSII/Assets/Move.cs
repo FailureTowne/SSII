@@ -13,8 +13,10 @@ public class Move : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-        transform.Translate(Direction * Time.deltaTime * Speed);
-
+        MoveObject(Direction, Speed);
 	}
+    public void MoveObject(Vector3 DirectionX, float SpeedX)
+    {
+        transform.Translate(DirectionX * Time.deltaTime * SpeedX);
+    }
 }

@@ -18,13 +18,19 @@ public class AtmoHealth : MonoBehaviour {
 	
     void OnTriggerEnter(Collider col)
     {
-        col.gameObject.GetComponent<JellyfishMovement>().Speed = 0;
-        TotalRateOfLoss += RateOfLoss;
+        if (col.gameObject.tag == "enemy")
+        {
+            col.gameObject.GetComponent<Move>().Speed = 0;
+            TotalRateOfLoss += RateOfLoss;
+        }
     }
 
     void OnTriggerExit(Collider col)
     {
-        col.gameObject.GetComponent<JellyfishMovement>().Speed = .05F;
-        TotalRateOfLoss -= RateOfLoss;
+        if (col.gameObject.tag == "enemy")
+        {
+            col.gameObject.GetComponent<Move>().Speed = .05F;
+            TotalRateOfLoss -= RateOfLoss;
+        }
     }
 }

@@ -14,12 +14,19 @@ public class AtmoCollide : MonoBehaviour {
 	
 	}
 
-    void OnTriggerEnter(Collider atmo)
+    void OnTriggerEnter(Collider col)
     {
-        if (atmo.gameObject.tag == "atmo")
+        if (col.gameObject.tag == "atmo")
         {
-            print("COLLISION");
-            GetComponent<JellyfishMovement>().Speed = 0;
+            GetComponent<Move>().Speed = 0;
+        }
+        if (col.gameObject.tag == "asteroid")
+        {
+            Destroy(gameObject);
+        }
+        if(col.gameObject.tag == "missile")
+        {
+            Destroy(gameObject);
         }
     }
 }
